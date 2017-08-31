@@ -31,5 +31,21 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "searchSettings": {
+    "dataSource": "db",
+    "public": true
+  },
+  "filterSettings": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Job": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Person": {
+    "dataSource": "db",
+    "public": true
   }
 }

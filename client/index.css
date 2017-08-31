@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #87ceeb
+}
+
+.input-field {
+  width: 100%;
+  height: 34px;
+  padding-left:10px;
+}
+
+.react-tagsinput {
+  border-color: rgb(169,169,169);
+  width: auto;
+  height: 34px;
+}
+
+.react-tagsinput-input {
+  font-size:100%;
+  line-height: 0;
+  padding-top:0;
+}
+
+.react-tagsinput-tag {
+  background: #CCC;
+  color: #000;
+  border-color: #000;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}

@@ -1,0 +1,32 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 2,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "searchSettings": 2,
+    "filterSettings": 2,
+    "Job": 1,
+    "Person": 2
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {
+      "QMKpkp7z2bZiAqNvHE9x1Wl0Qxy8B7PRetP3p93N7JEmFRAjcgDhu8yddpH3ldCK": "{\"id\":\"QMKpkp7z2bZiAqNvHE9x1Wl0Qxy8B7PRetP3p93N7JEmFRAjcgDhu8yddpH3ldCK\",\"ttl\":1209600,\"created\":\"2017-08-31T10:15:11.020Z\",\"userId\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "searchSettings": {
+      "1": "{\"q\":\"\",\"title\":\"\",\"skills\":[],\"job_type\":\"\",\"duration\":\"\",\"workload\":\"\",\"job_status\":\"\",\"personId\":1,\"id\":1}"
+    },
+    "filterSettings": {
+      "1": "{\"terms\":[],\"countries\":[],\"personId\":1,\"id\":1}"
+    },
+    "Job": {},
+    "Person": {
+      "1": "{\"username\":\"User1\",\"password\":\"$2a$10$a1Ouk9cWe7HZca.If7/nm.keAwLgdFdW517q/wnSwxC5gXUfcaBni\",\"email\":\"example@example.com\",\"id\":1}"
+    }
+  }
+}

@@ -29,6 +29,7 @@
     }
   },
   "final": {
+    "./middleware/LoopbackUrlNotFoundCatch": {},
     "loopback#urlNotFound": {}
   },
   "final:after": {
