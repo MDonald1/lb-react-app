@@ -5,6 +5,7 @@ import common from '../reducers/common'
 import filterForm from '../reducers/filterForm'
 import searchForm from '../reducers/searchForm'
 import jobs from '../reducers/jobs'
+import register from '../reducers/register'
 
 import {
 	promiseMiddleware,
@@ -16,7 +17,8 @@ const reducer = combineReducers({
   filterForm,
   common,
 	auth,
-	jobs
+	jobs,
+	register
 })
 
 const middleware = applyMiddleware(promiseMiddleware, localStorageMiddleware)

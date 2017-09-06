@@ -30,15 +30,28 @@ class LogButtonState extends React.Component {
 
     if(!this.props.loggedIn) {
       return (
-        <li className="nav-item pull-right">
-          <Link to='/login' className='nav-link'>Log in</Link>
-        </li>
+        <ul className="navbar-nav">
+          <li className="nav-item pull-right">
+            <Link to='/login' className='nav-link'>Log in</Link>
+          </li>
+          <li className="nav-item pull-right">
+            <Link to='/register' className='nav-link'>Register</Link>
+          </li>
+        </ul>
       )
     } else {
       return (
-        <li className="nav-item pull-right">
-          <a href="#" className={`nav-link ${linkDisabled}`} onClick={() => this.logOut(token)}>Log out</a>
-        </li>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to='search' className='nav-link'>Search</Link>
+          </li>
+          <li className="nav-item">
+            <Link to='filter' className='nav-link'>Filter</Link>
+          </li>
+          <li className="nav-item pull-right">
+            <a href="#" className={`nav-link ${linkDisabled}`} onClick={() => this.logOut(token)}>Log out</a>
+          </li>
+        </ul>
       )
     }
   }

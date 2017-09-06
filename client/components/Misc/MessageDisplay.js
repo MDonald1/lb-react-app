@@ -1,9 +1,5 @@
 import React from 'react'
 
-/*const MessageDisplay = (props) => (
-  <h4 className={props.error ? 'text-center text-danger' : 'text-center'}>{props.message}</h4>
-)*/
-
 class MessageDisplay extends React.Component {
   render() {
     return (

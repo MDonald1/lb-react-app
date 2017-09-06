@@ -15,20 +15,14 @@ class Header extends React.Component {
   render() {
     const appName = this.props.appName
     return (
-      <div className="container-fluid">
-        <nav className="navbar navbar-toggleable-md navbar-inverse bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
             <Link to='/' className="navbar-brand">{appName}</Link>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav">
-                <Link to='search' className='nav-item nav-link'>Search</Link>
-                <Link to='filter' className='nav-item nav-link'>Filter</Link>
+            <div className="collapse navbar-collapse">
                 <LogButtonState loggedIn={this.props.loggedIn} />
-              </div>
             </div>
           </div>
         </nav>
-      </div>
     )
   }
 }

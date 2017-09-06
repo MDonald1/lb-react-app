@@ -12,12 +12,27 @@ export const loginValueChanged = (key, payload) => ({
   payload
 })
 
+export const registerValueChanged = (key, payload) => ({
+  type: 'REGISTER_VALUE_CHANGED',
+  key: key,
+  payload
+})
+
 export const unloadLoginForm = () => ({
   type: 'LOGIN_PAGE_UNLOADED'
 })
 
+export const unloadRegisterForm = () => ({
+  type: 'REGISTER_PAGE_UNLOADED'
+})
+
 export const logIn = (payload) => ({
   type: 'LOGIN',
+  payload
+})
+
+export const register = (payload) => ({
+  type: "REGISTER",
   payload
 })
 

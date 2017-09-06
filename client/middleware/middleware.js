@@ -14,7 +14,7 @@ const promiseMiddleware = store => next => action => {
       },
       err => {
         action.error = true
-        action.payload = err.message
+        action.payload = err.error.messages
         store.dispatch(action)
       }
     )

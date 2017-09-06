@@ -6,6 +6,7 @@ import Search from './components/Search'
 import Jobs from './components/Jobs'
 import Filter from './components/Filter'
 import Login from './components/Login'
+import Register from './components/Register'
 
 import Header from './components/Wrapper/Header'
 
@@ -43,6 +44,7 @@ class App extends Component {
             <Route path ='/search' component={Search}/>
             <Route path ='/filter' component={Filter}/>
             <Route path ='/login' component={Login}/>
+            <Route path ='/register' component={Register}/>
           </Switch>
         </div>
         

@@ -1,4 +1,13 @@
-export {onLoad, loginValueChanged, unloadLoginForm, logIn, logOut, startAsync} from './common'
+export {onLoad, 
+  loginValueChanged, 
+  unloadLoginForm, 
+  logIn, 
+  logOut, 
+  startAsync,
+  registerValueChanged,
+  unloadRegisterForm,
+  register
+} from './common'
 
 export {getJobs, unloadJobs} from './jobs'
 

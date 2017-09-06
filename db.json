@@ -1,7 +1,7 @@
 {
   "ids": {
     "User": 1,
-    "AccessToken": 2,
+    "AccessToken": 1,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
@@ -12,9 +12,7 @@
   },
   "models": {
     "User": {},
-    "AccessToken": {
-      "QMKpkp7z2bZiAqNvHE9x1Wl0Qxy8B7PRetP3p93N7JEmFRAjcgDhu8yddpH3ldCK": "{\"id\":\"QMKpkp7z2bZiAqNvHE9x1Wl0Qxy8B7PRetP3p93N7JEmFRAjcgDhu8yddpH3ldCK\",\"ttl\":1209600,\"created\":\"2017-08-31T10:15:11.020Z\",\"userId\":1}"
-    },
+    "AccessToken": {},
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
@@ -26,7 +24,7 @@
     },
     "Job": {},
     "Person": {
-      "1": "{\"username\":\"User1\",\"password\":\"$2a$10$a1Ouk9cWe7HZca.If7/nm.keAwLgdFdW517q/wnSwxC5gXUfcaBni\",\"email\":\"example@example.com\",\"id\":1}"
+      "1": "{\"username\":\"user2\",\"password\":\"$2a$10$9/QzqjN4RuHwzqhe1ZPZBeSsYhlfEfcIJa90ynkcYlcV0HKnEmdRG\",\"email\":\"user@example.om\",\"id\":1}"
     }
   }
 }

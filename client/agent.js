@@ -81,6 +81,12 @@ const jobs = {
 
 
 const Auth = {
+  register: (username, email, password) => 
+    requests.post('People', {
+      username: username,
+      email: email,
+      password: password
+    }),
   login: (username, password) => 
     requests.post('People/login', {
       username: username,

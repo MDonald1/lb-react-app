@@ -114,7 +114,7 @@ class Search extends React.Component {
         <div className = "container">
           <div className="row">
             
-            <div className="col-md-6 offset-md-3 col-xs-12">
+            <div className="col-md-6 mx-auto col-xs-12">
             <h1 className="text-center">Job Search</h1>
 
               <form onSubmit={this.onSubmit(query)}>
