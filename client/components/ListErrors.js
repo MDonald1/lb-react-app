@@ -23,3 +23,5 @@ class ListErrors extends React.Component {
     }
   }
 }
+
+export default ListErrors

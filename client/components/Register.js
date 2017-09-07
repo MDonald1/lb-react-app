@@ -4,8 +4,6 @@ import {withRouter, Link, Redirect} from 'react-router-dom'
 import agent from '../agent'
 import {notAuthenticated} from '../authHelpers'
 
-import ListErrors from './Misc/ListErrors'
-
 import {registerValueChanged, unloadRegisterForm, register} from '../actions'
 
 const mapStatetoProps = (state) => ({
@@ -43,7 +41,7 @@ class Register extends React.Component {
     const username = this.props.username
     const password = this.props.password
     const email = this.props.email
-    const error = this.props.errors
+    const errors = this.props.errors
 
     if (this.props.registered) {
       return (
@@ -106,8 +104,6 @@ class Register extends React.Component {
                 </form>
   
                 <br />
-
-                <ListErrors errors={error} />
 
                 <br />
 

@@ -1,0 +1,19 @@
+{
+  "title": "test title",
+  "job_type": "string",
+  "snippet": "Hello! I am job type no 1",
+  "category2": "Development",
+  "subcategory2": "Web Development",
+  "budget": 300000,
+  "duration": "week",
+  "skills": [
+    "bowling",
+    "running",
+    "jumping"
+  ],
+  "date_created": "2017-09-07T08:38:49.113Z",
+  "job_status": "open",
+  "url": "#",
+  "workload": "part-time",
+  "job_id": "abcd"
+}

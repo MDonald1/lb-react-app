@@ -4,6 +4,8 @@ import {withRouter, Link} from 'react-router-dom'
 import agent from '../agent'
 import {notAuthenticated} from '../authHelpers'
 
+import ListErrors from './ListErrors'
+
 import {loginValueChanged, logIn, unloadLoginForm} from '../actions'
 
 const mapStatetoProps = (state) => ({
@@ -39,6 +41,7 @@ class Login extends React.Component {
   render() {
     const username = this.props.username
     const password = this.props.password
+    const errors = this.props.errors
 
       return (
         <div className="auth-page">
@@ -84,6 +87,10 @@ class Login extends React.Component {
 
                   </fieldset>
                 </form>
+
+                <br/>
+
+                <ListErrors errors={errors}/>
 
                 <br/>
 

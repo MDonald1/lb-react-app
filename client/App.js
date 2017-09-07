@@ -3,7 +3,7 @@ import {Route, Switch, withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Search from './components/Search'
-import Jobs from './components/Jobs'
+import JobsPage from './components/Jobs/JobsPage'
 import Filter from './components/Filter'
 import Login from './components/Login'
 import Register from './components/Register'
@@ -40,7 +40,7 @@ class App extends Component {
         <br />
         <div className="container">
           <Switch>
-            <Route exact path ='/' component={Jobs}/>
+            <Route exact path ='/' component={JobsPage}/>
             <Route path ='/search' component={Search}/>
             <Route path ='/filter' component={Filter}/>
             <Route path ='/login' component={Login}/>

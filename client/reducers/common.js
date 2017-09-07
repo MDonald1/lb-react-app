@@ -19,7 +19,8 @@ const common = (state = defaultState, action) => {
         ...state,
         token: action.error ? null : action.payload.id,
         userId: action.error ? null : action.payload.userId,
-        loggedIn: action.error ? false : true
+        loggedIn: action.error ? false : true,
+        errors: action.error ? action.payload.errors : null
       }
     case 'LOGOUT':
       return {
