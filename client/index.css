@@ -32,3 +32,20 @@ body {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
+thead {
+  background: #BBB;
+}
+
+.job-header {
+  background: #DDD
+}
+
+.job-body {
+  background: white;
+}
+
+.skill-item {
+  padding: 5px 7px;
+  border-radius: 5px;
+}

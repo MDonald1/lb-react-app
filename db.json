@@ -26,11 +26,7 @@
       "1": "{\"terms\":[],\"countries\":[],\"personId\":1,\"id\":1}",
       "2": "{\"terms\":[],\"countries\":[],\"personId\":2,\"id\":2}"
     },
-    "Job": {
-      "1": "{\"title\":\"test title\",\"job_type\":\"string\",\"snippet\":\"Hello! I am job type no 1\",\"category2\":\"Development\",\"subcategory2\":\"Web Development\",\"budget\":300000,\"duration\":\"week\",\"skills\":[\"bowling\",\"running\",\"jumping\"],\"date_created\":\"2017-09-07T08:38:49.113Z\",\"job_status\":\"open\",\"url\":\"#\",\"workload\":\"part-time\",\"job_id\":\"abcd\",\"personId\":2,\"id\":1}",
-      "2": "{\"title\":\"test title2\",\"job_type\":\"string\",\"snippet\":\"Hello! I am job type no 2\",\"category2\":\"Development\",\"subcategory2\":\"Web Development\",\"budget\":300000,\"duration\":\"week\",\"skills\":[\"bowling\",\"running\",\"jumping\"],\"date_created\":\"2017-09-07T08:38:49.113Z\",\"job_status\":\"open\",\"url\":\"#\",\"workload\":\"part-time\",\"job_id\":\"abcd\",\"personId\":2,\"id\":2}",
-      "3": "{\"title\":\"test title3\",\"job_type\":\"string\",\"snippet\":\"Hello! I am job type no 3\",\"category2\":\"Development\",\"subcategory2\":\"Web Development\",\"budget\":300000,\"duration\":\"week\",\"skills\":[\"bowling\",\"running\",\"jumping\"],\"date_created\":\"2017-09-07T08:38:49.113Z\",\"job_status\":\"open\",\"url\":\"#\",\"workload\":\"part-time\",\"job_id\":\"abcd\",\"personId\":2,\"id\":3}"
-    },
+    "Job": {},
     "Person": {
       "1": "{\"username\":\"user2\",\"password\":\"$2a$10$9/QzqjN4RuHwzqhe1ZPZBeSsYhlfEfcIJa90ynkcYlcV0HKnEmdRG\",\"email\":\"user@example.om\",\"id\":1}",
       "2": "{\"username\":\"user3\",\"password\":\"$2a$10$so.9YRh2sueDjhciw9y0GuuA8JMZMdVgMx5tkPWhigdfdgQC9DQ/q\",\"email\":\"this@example.com\",\"id\":2}"

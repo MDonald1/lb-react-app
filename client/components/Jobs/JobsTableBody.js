@@ -1,8 +1,7 @@
 import React from 'react'
 
-import Moment from 'react-moment'
-import Numeral from 'numeral'
 import JobHeader from './JobHeader'
+import JobBody from './JobBody'
 
 function JobsTableBody(props) {
   if (props.jobs) {
@@ -11,7 +10,10 @@ function JobsTableBody(props) {
         {
           props.jobs.map((job) => {
             return (
-              <JobHeader job={job}/>
+              <div key={job.id} className="mr-auto job-body">
+                <JobHeader job={job}/>
+                <JobBody job={job}/>
+              </div>
             )
           })
         }

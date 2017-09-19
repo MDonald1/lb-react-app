@@ -9,7 +9,7 @@ export {onLoad,
   register
 } from './common'
 
-export {getJobs, unloadJobs} from './jobs'
+export {getJobs, unloadJobs, deleteJob} from './jobs'
 
 export {filterValueChanged, submitFilterForm, unloadFilter, clearFilterForm} from './filter'
 export {searchValueChanged, submitSearchForm, unloadSearch, clearSearchForm} from './search'

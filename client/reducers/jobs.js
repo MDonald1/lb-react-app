@@ -9,6 +9,13 @@ const jobs = (state = defaultState, action) => {
         ...state,
         jobs: action.error ? null : action.payload
       }
+    case 'DELETE_JOB':
+      if (!action.error) {
+        return {
+          ...state,
+          jobs: state.jobs.filter(job => job.id !== action.id)
+        }
+      } else return state
     case 'UNLOAD_JOBS_PAGE':
       return {}
     default:

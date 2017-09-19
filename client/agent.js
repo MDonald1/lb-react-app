@@ -47,9 +47,10 @@ const personRqs = {
     requests.getAuth(`People/${id}/${url}`, token),
   userPost: (id, url, token, body) =>
     requests.postAuth(`People/${id}/${url}`, token, body),
-  userPut: (id, url, token, body) => {
-    requests.putAuth(`People/${id}/${url}`, token, body)
-  }
+  userPut: (id, url, token, body) => 
+    requests.putAuth(`People/${id}/${url}`, token, body),
+  userDelete: (id, url, token, body) => 
+    requests.deleteAuth(`People/${id}/${url}`, token, body)
 }
 
 const searchSettings = {
@@ -75,8 +76,8 @@ const jobs = {
     personRqs.userGet(id, 'jobs', token),
   create: (id, token) => 
     personRqs.userPost(id, 'jobs', token),
-  delete: (jobId, token) =>
-    requests.deleteAuth(`Jobs/${jobId}`, token)
+  delete: (userId, jobId, token) =>
+    personRqs.userDelete(userId, `jobs/${jobId}`, token)
 }
 
 

@@ -43,7 +43,7 @@ class JobsPage extends React.Component {
 
     if (jobs && jobs.length > 0) {
       return (
-        <div>
+        <div className = "row">
           <table className="table tabled-striped">
             <JobsTableHead />
             <JobsTableBody jobs = {jobs} />
@@ -54,7 +54,6 @@ class JobsPage extends React.Component {
       return (
         <div className='text-center'>
           No jobs here!
-          {jobs}
         </div>
       )
     }
