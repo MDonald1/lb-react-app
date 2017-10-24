@@ -39,17 +39,21 @@ class JobHeader extends React.Component {
 
     if (job) {
       return (
-        <tr className="job-header">
-          <td><a href='#' onClick={this.deleteJob(userId, job.id, token)}>X</a></td>
-          <td>{job.title}</td>
-          <td>{job.subcategory2}</td>
-          <td>
-            {Numeral(job.budget).format('$0,0')}
-          </td>
-          <td>
-            <Moment fromNow>{job.date_created}</Moment>
-          </td>
-        </tr>
+        <table>
+          <tbody>
+            <tr className="job-header">
+              <td><a href='#' onClick={this.deleteJob(userId, job.id, token)}>X</a></td>
+              <td>{job.title}</td>
+              <td>{job.subcategory2}</td>
+              <td>
+                {Numeral(job.budget).format('$0,0')}
+              </td>
+              <td>
+                <Moment fromNow>{job.date_created}</Moment>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       )
     } else return null
   }

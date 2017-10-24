@@ -6,18 +6,18 @@ import JobBody from './JobBody'
 function JobsTableBody(props) {
   if (props.jobs) {
     return (
-      <tbody>
+      <div className="col-10 mr-auto">
         {
           props.jobs.map((job) => {
             return (
-              <div key={job.id} className="mr-auto job-body">
+              <div key={job.id} className="job-body">
                 <JobHeader job={job}/>
                 <JobBody job={job}/>
               </div>
             )
           })
         }
-      </tbody>
+      </div>
     )
   } else return null
 }

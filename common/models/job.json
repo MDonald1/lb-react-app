@@ -60,6 +60,16 @@
     },
     "personId": {
       "type": "number"
+    },
+    "client": {
+      "type": {
+        "country": "string",
+        "feedback": "number",
+        "jobs_posted": "number",
+        "past_hires": "number",
+        "payment_verification_status": "string",
+        "reviews_count": "number"
+      }
     }
   },
   "validations": [],

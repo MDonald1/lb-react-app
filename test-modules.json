@@ -11,9 +11,17 @@
     "running",
     "jumping"
   ],
+  "client": {
+    "country": "United States",
+    "feedback": 0.98,
+    "jobs_posted": 64,
+    "past_hires": 50,
+    "payment_verification_status": "VERIFIED",
+    "reviews_count": 20
+  },
   "date_created": "2017-09-07T08:38:49.113Z",
   "job_status": "open",
   "url": "#",
-  "workload": "part-time",
+  "workload": "part_time",
   "job_id": "abcd"
 }

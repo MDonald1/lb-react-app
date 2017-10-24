@@ -3,13 +3,11 @@ import React from 'react'
 import JobsTableHead from './JobsTableHead'
 import JobsTableBody from './JobsTableBody'
 
-import Moment from 'react-moment'
-
 import agent from '../../agent'
 
 import {isAuthenticated} from '../../authHelpers'
 
-import {getJobs, unloadJobs} from '../../actions'
+import {loadJobsPage, unloadJobs} from '../../actions'
 
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
@@ -20,17 +18,49 @@ const mapStateToProps = state => ({
   token: state.common.token
 })
 
+const filterJobs = (jobs,filterObj) => {
+  if (filterObj && (filterObj.countries || filterObj.terms)) {
+
+    let filteredJobs = jobs.filter(job => {
+      let countries = filterObj.countries.toString()
+
+      return !(countries.includes(job.client.country.toLowerCase()))
+    })
+
+    return filteredJobs
+  } else return jobs
+}
+  
+
 const mapDispatchToProps = dispatch => ({
-  getJobs: (payload) =>
-    dispatch(getJobs(payload)),
+  loadJobsPage: (payload) =>
+    dispatch(loadJobsPage(payload)),
   unloadPage: () => 
     dispatch(unloadJobs())
 })
 
 class JobsPage extends React.Component {
 
+  constructor() {
+    super()
+    this.state = {
+      visibleJobs: []
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.filters && nextProps.jobs) {
+      this.setState({
+        visibleJobs: filterJobs(nextProps.jobs, nextProps.filters)
+      })
+    }
+  }
+
   componentWillMount() {
-    this.props.getJobs(agent.jobs.get(this.props.userId, this.props.token))
+    this.props.loadJobsPage(Promise.all([
+      agent.jobs.get(this.props.userId, this.props.token), 
+      agent.filterSettings.get(this.props.userId, this.props.token)
+    ]))
   }
 
   componentWillUnmount() {
@@ -39,15 +69,15 @@ class JobsPage extends React.Component {
 
   render() {
 
-    const jobs = this.props.jobs ? this.props.jobs : []
+    const jobs = this.state.visibleJobs ? this.state.visibleJobs : []
 
     if (jobs && jobs.length > 0) {
       return (
         <div className = "row">
           <table className="table tabled-striped">
             <JobsTableHead />
-            <JobsTableBody jobs = {jobs} />
           </table>
+          <JobsTableBody jobs = {jobs} />
         </div>
       )
     } else {

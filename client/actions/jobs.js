@@ -1,5 +1,5 @@
-export const getJobs = (payload) => ({
-  type: "RETRIEVE_JOBS",
+export const loadJobsPage = (payload) => ({
+  type: "JOBS_PAGE_LOADED",
   payload
 })
 

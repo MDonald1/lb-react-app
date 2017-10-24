@@ -1,13 +1,15 @@
 const defaultState = {
-  jobs: []
+  jobs: [],
+  filters: {}
 }
 
 const jobs = (state = defaultState, action) => {
   switch(action.type) {
-    case 'RETRIEVE_JOBS':
+    case 'JOBS_PAGE_LOADED':
       return {
         ...state,
-        jobs: action.error ? null : action.payload
+        jobs: action.error ? null : action.payload[0],
+        filters: action.error ? null : action.payload[1]
       }
     case 'DELETE_JOB':
       if (!action.error) {
