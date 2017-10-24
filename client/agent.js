@@ -53,6 +53,8 @@ const personRqs = {
     requests.deleteAuth(`People/${id}/${url}`, token, body)
 }
 
+const getUser = (id, token) => personRqs.userGet(id,'',token)
+
 const searchSettings = {
   get: (id, token) =>
     personRqs.userGet(id, 'searchSettings', token),
@@ -106,5 +108,6 @@ export default {
   Auth,
   searchSettings,
   filterSettings,
-  jobs
+  jobs,
+  getUser
 }

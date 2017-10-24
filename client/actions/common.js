@@ -1,9 +1,8 @@
-export const onLoad = (token, userId) => ({
+export const onLoad = (token, userId, payload) => ({
   type: 'APP_LOAD',
-  payload: {
-    token: token,
-    userId: userId
-  }
+  token: token,
+  userId: userId,
+  payload: payload
 })
 
 export const loginValueChanged = (key, payload) => ({

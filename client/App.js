@@ -19,13 +19,14 @@ import agent from './agent'
 const mapDispatchtoProps = dispatch => ({
   onLoad: (token, userId) =>
     dispatch(
-      onLoad(token, userId)
+      onLoad(token, userId, agent.getUser(userId, token))
     )
 })
 
 class App extends Component {
 
   componentWillMount() {
+
     const token = window.localStorage.getItem('token')
     const userId = window.localStorage.getItem('userId')
 

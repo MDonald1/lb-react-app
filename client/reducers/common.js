@@ -9,10 +9,10 @@ const common = (state = defaultState, action) => {
     case 'APP_LOAD':
       return {
         ...state,
-        token: action.payload.token || null,
-        userId: action.payload.userId || null,
+        token: action.error ? null : action.token,
+        userId: action.error ? null : action.userId,
         appLoaded: true,
-        loggedIn: action.payload.token ? true : false
+        loggedIn: action.error ? false : true
       }
     case 'LOGIN':
       return {
