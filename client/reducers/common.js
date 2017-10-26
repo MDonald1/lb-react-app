@@ -1,7 +1,8 @@
 const defaultState = {
   appName: 'Job Search',
   jobs: null,
-  loggedIn: false
+  loggedIn: false,
+  appLoaded: false
 }
 
 const common = (state = defaultState, action) => {

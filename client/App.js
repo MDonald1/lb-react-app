@@ -16,12 +16,36 @@ import {onLoad} from './actions'
 
 import agent from './agent'
 
+const mapState = state => ({
+  appLoaded: state.common.appLoaded
+})
+
 const mapDispatchtoProps = dispatch => ({
   onLoad: (token, userId) =>
     dispatch(
       onLoad(token, userId, agent.getUser(userId, token))
     )
 })
+
+const AppContent = (props) => {
+  if (props.loaded) {
+    return (
+      <div className="container">
+        <Switch>
+          <Route exact path ='/' component={JobsPage}/>
+          <Route path ='/search' component={Search}/>
+          <Route path ='/filter' component={Filter}/>
+          <Route path ='/login' component={Login}/>
+          <Route path ='/register' component={Register}/>
+        </Switch>
+      </div>
+    )
+  } else {
+    return (
+      <h1 className="text-center">Loading</h1>
+    )
+  }
+}
 
 class App extends Component {
 
@@ -34,24 +58,18 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="container-fluid">
-        <Header />
+    const appLoaded = this.props.appLoaded
+      return (
+        <div className="container-fluid">
+          <Header />
 
-        <br />
-        <div className="container">
-          <Switch>
-            <Route exact path ='/' component={JobsPage}/>
-            <Route path ='/search' component={Search}/>
-            <Route path ='/filter' component={Filter}/>
-            <Route path ='/login' component={Login}/>
-            <Route path ='/register' component={Register}/>
-          </Switch>
+          <br />
+
+        <AppContent loaded={appLoaded}/>
+          
         </div>
-        
-      </div>
-    )
+      )
   }
 }
 
-export default withRouter(connect(() => ({}), mapDispatchtoProps)(App));
+export default withRouter(connect(mapState, mapDispatchtoProps)(App));

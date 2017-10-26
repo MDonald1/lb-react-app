@@ -130,7 +130,7 @@ function JobBody(props) {
     const client = job.client
 
     return (
-      <div>
+      <div className="job-body mr-auto">
         <br />
 
         <h4>Details:</h4>
