@@ -46,7 +46,46 @@ thead {
   margin: 0 50px;
 }
 
+.snippet-text {
+  margin: 0 50px
+}
+
+.pull-text {
+  margin: 5px 40px;
+}
+
+.line-break {
+  border: 0.5px solid black;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.client-rating {
+  border: 0 0 20px 0;
+}
+
 .skill-item {
   padding: 5px 7px;
   border-radius: 5px;
+}
+
+.job-link-button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .info-panel p {
+    font-size: 15px;
+  }
+
+  .pull-text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  
+  
+  
 }
