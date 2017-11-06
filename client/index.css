@@ -38,12 +38,24 @@ thead {
 }
 
 .job-header {
-  background: #DDD
+  background: #DDD;
+  margin: 0 50px;
+  padding: 5px 0;
+  display: flex;
+}
+
+.delete-button {
+  flex-grow: 1;
+}
+
+.header-elements {
+  flex-grow: 2;
 }
 
 .job-body {
   background: white;
   margin: 0 50px;
+  margin-bottom: 15px
 }
 
 .snippet-text {

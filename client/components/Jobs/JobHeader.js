@@ -39,7 +39,7 @@ class JobHeader extends React.Component {
 
     if (job) {
       return (
-        <table>
+        /* <table>
           <tbody>
             <tr className="job-header">
               <td><a href='#' onClick={this.deleteJob(userId, job.id, token)}>X</a></td>
@@ -54,6 +54,41 @@ class JobHeader extends React.Component {
             </tr>
           </tbody>
         </table>
+        */
+
+        /*<ul className="list-inline job-header">
+          <li className="list-inline-item">
+            <a href='#' onClick={this.deleteJob(userId, job.id, token)}>X</a>
+          </li>
+          <li className="list-inline-item">
+            {job.title}
+          </li>
+          <li className="list-inline-item">
+            {job.subcategory2}
+          </li>
+          <li className="list-inline-item">
+            {Numeral(job.budget).format('$0,0')}
+          </li>
+          <li className="list-inline-item">
+            <Moment fromNow>{job.date_created}</Moment>
+          </li>
+        </ul>*/
+
+        <div className="job-header">
+          <div className="delete-button">
+            <a href='#' onClick={this.deleteJob(userId, job.id, token)}>X</a>
+          </div>
+          <div className="">
+            <ul className="header-elements list-inline">
+              <li className="list-inline-item">{job.title}</li>
+              <li className="list-inline-item">{job.subcategory2}</li>
+              <li className="list-inline-item">{Numeral(job.budget).format('$0,0')}</li>
+              <li className="list-inline-item"><Moment fromNow>{job.date_created}</Moment></li>
+            </ul>
+          </div>
+        </div> 
+
+
       )
     } else return null
   }
