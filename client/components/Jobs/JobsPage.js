@@ -70,21 +70,28 @@ class JobsPage extends React.Component {
   render() {
 
     const jobs = this.state.visibleJobs ? this.state.visibleJobs : []
+    const jobsLoaded = this.props.jobsLoaded
 
-    if (jobs && jobs.length > 0) {
-      return (
-        <div className = "row">
-          <table className="table tabled-striped">
-            <JobsTableHead />
-          </table>
-          <JobsTableBody jobs = {jobs} />
-        </div>
-      )
+    if (jobsLoaded) {
+      if (jobs && jobs.length > 0) {
+        return (
+          <div className = "row">
+            <table className="table tabled-striped">
+              <JobsTableHead />
+            </table>
+            <JobsTableBody jobs = {jobs} />
+          </div>
+        )
+      } else {
+        return (
+          <div className='text-center'>
+            No jobs here!
+          </div>
+        )
+      }
     } else {
       return (
-        <div className='text-center'>
-          No jobs here!
-        </div>
+        <h1 className="text-center">Loading jobs...</h1>
       )
     }
     

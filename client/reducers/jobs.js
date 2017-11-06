@@ -1,6 +1,7 @@
 const defaultState = {
   jobs: [],
-  filters: {}
+  filters: {},
+  jobsLoaded: false
 }
 
 const jobs = (state = defaultState, action) => {
@@ -9,7 +10,8 @@ const jobs = (state = defaultState, action) => {
       return {
         ...state,
         jobs: action.error ? null : action.payload[0],
-        filters: action.error ? null : action.payload[1]
+        filters: action.error ? null : action.payload[1],
+        jobsLoaded: action.error ? false : true
       }
     case 'DELETE_JOB':
       if (!action.error) {
